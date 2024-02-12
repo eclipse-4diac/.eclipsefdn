@@ -52,5 +52,12 @@ orgs.newOrg('eclipse-4diac') {
         enabled: false,
       },
     },
+    orgs.newRepo('4diac-documentation') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
   ],
 }

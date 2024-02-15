@@ -13,6 +13,12 @@ orgs.newOrg('eclipse-4diac') {
     },
   },
   _repositories+:: [
+    orgs.newRepo('4diac-documentation') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('4diac-examples') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -28,6 +34,17 @@ orgs.newOrg('eclipse-4diac') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+    },
+    orgs.newRepo('4diac-forte') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "release",
+      delete_branch_on_merge: false,
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('4diac-fortebuildcontainer') {
       allow_merge_commit: true,
@@ -51,12 +68,6 @@ orgs.newOrg('eclipse-4diac') {
       workflows+: {
         enabled: false,
       },
-    },
-    orgs.newRepo('4diac-documentation') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      web_commit_signoff_required: false,
     },
   ],
 }

@@ -69,5 +69,15 @@ orgs.newOrg('eclipse-4diac') {
         enabled: false,
       },
     },
+    orgs.newRepo('4diac-website-hugo') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
+    },
   ],
 }

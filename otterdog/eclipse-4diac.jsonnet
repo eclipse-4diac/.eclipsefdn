@@ -43,7 +43,7 @@ orgs.newOrg('eclipse-4diac') {
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
-        enabled: false,
+        enabled: true,
       },
     },
     orgs.newRepo('4diac-fortebuildcontainer') {

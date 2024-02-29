@@ -32,6 +32,7 @@ orgs.newOrg('eclipse-4diac') {
     orgs.newRepo('4diac-fbe') {
       allow_merge_commit: true,
       allow_update_branch: false,
+      default_branch: "release",
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
@@ -55,7 +56,7 @@ orgs.newOrg('eclipse-4diac') {
     orgs.newRepo('4diac-toolchain') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
+      default_branch: "release",
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },

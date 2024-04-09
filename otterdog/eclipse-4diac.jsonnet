@@ -53,8 +53,13 @@ orgs.newOrg('eclipse-4diac') {
       allow_update_branch: false,
       default_branch: "release",
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      has_discussions: true,
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('4diac-toolchain') {
       allow_merge_commit: true,

@@ -9,6 +9,15 @@ orgs.newOrg('eclipse-4diac') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  webhooks+: [
+    orgs.newOrgWebhook('https://ci.eclipse.org/4diac/github-webhook/') {
+      content_type: "json",
+      events+: [
+        "pull_request",
+        "push"
+      ],
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('4diac-documentation') {
       allow_merge_commit: true,

@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-4diac') {
+orgs.newOrg('iot.4diac', 'eclipse-4diac') {
   settings+: {
     description: "",
     name: "Eclipse 4diac™",

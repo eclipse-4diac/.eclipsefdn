@@ -40,6 +40,7 @@ orgs.newOrg('iot.4diac', 'eclipse-4diac') {
       allow_update_branch: false,
       default_branch: "release",
       delete_branch_on_merge: false,
+      has_discussions: true,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('4diac-forte') {
@@ -47,7 +48,16 @@ orgs.newOrg('iot.4diac', 'eclipse-4diac') {
       allow_update_branch: false,
       default_branch: "release",
       delete_branch_on_merge: false,
+      description: "4diac FORTE is a small portable implementation of an IEC 61499 runtime environment targeting small embedded control devices, implemented in C++.",
+      has_discussions: true,
+      homepage: "https://eclipse.dev/4diac/4diac_forte/",
       web_commit_signoff_required: false,
+      topics+: [
+        "iec-61499",
+        "plc",
+        "real-time",
+        "real-time-systems",
+      ],
     },
     orgs.newRepo('4diac-fortebuildcontainer') {
       allow_merge_commit: true,
@@ -60,6 +70,7 @@ orgs.newOrg('iot.4diac', 'eclipse-4diac') {
       allow_update_branch: false,
       default_branch: "release",
       delete_branch_on_merge: false,
+      has_discussions: true,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('4diac-toolchain') {

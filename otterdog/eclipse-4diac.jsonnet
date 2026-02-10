@@ -68,7 +68,7 @@ orgs.newOrg('iot.4diac', 'eclipse-4diac') {
     orgs.newRepo('4diac-ide') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "release",
+      default_branch: "develop",
       delete_branch_on_merge: false,
       has_discussions: true,
       web_commit_signoff_required: false,

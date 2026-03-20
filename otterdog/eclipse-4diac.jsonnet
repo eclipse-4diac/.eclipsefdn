@@ -9,6 +9,11 @@ orgs.newOrg('iot.4diac', 'eclipse-4diac') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('GITLAB_API_TOKEN') {
+      value: "pass:bots/iot.4diac/gitlab.eclipse.org/api-token",
+    },
+  ],
   webhooks+: [
     orgs.newOrgWebhook('https://ci.eclipse.org/4diac/github-webhook/') {
       content_type: "json",

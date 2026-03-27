@@ -9,6 +9,19 @@ orgs.newOrg('iot.4diac', 'eclipse-4diac') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  blueprints+: [
+    {
+      id: "pin-workflows",
+      name: "Pin GitHub actions in workflows",
+      description: "Pin GitHub actions used in workflows to their corresponding commit hash.",
+      type: "pin_workflow",
+      config: {
+        repo_selector: {
+          name_pattern: [".*"],
+        },
+      },
+    },
+  ],
   secrets+: [
     orgs.newOrgSecret('GITLAB_API_TOKEN') {
       value: "pass:bots/iot.4diac/gitlab.eclipse.org/api-token",
